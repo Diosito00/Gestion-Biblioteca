@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=Prestamo
+comment0.text=\r\n\ Write\ a\ description\ of\ class\ Prestamo\ here.\r\n\ \r\n\ @author\ Aguirre\ Mauricio\ Alejandro\r\n\ @version\ 25/10/25\r\n
+comment1.params=p_fechaRetiro
+comment1.target=void\ setFechaRetiro(java.util.Calendar)
+comment2.params=p_fechaDevolucion
+comment2.target=void\ setFechaDevolucion(java.util.Calendar)
+comment3.params=p_libro
+comment3.target=void\ setLibro(Libro)
+comment4.params=
+comment4.target=java.util.Calendar\ getFechaRetiro()
+comment5.params=
+comment5.target=java.util.Calendar\ getFechaDevolucion()
+comment6.params=
+comment6.target=Libro\ getLibro()
+comment7.params=p_fecha
+comment7.target=void\ registrarFechaDevolucion(java.util.Calendar)
+comment8.params=p_fecha
+comment8.target=boolean\ vencido(java.util.Calendar)
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10
