@@ -1,14 +1,18 @@
 #BlueJ class context
 comment0.target=Prestamo
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ Prestamo\ here.\r\n\ \r\n\ @author\ Aguirre\ Mauricio\ Alejandro\r\n\ @version\ 25/10/25\r\n
+comment0.text=\r\n\ Clase\ que\ representa\ un\ pr\u00E9stamo\ de\ un\ libro\ realizado\ por\ un\ socio.\r\n\ \r\n\ Contiene\ informaci\u00F3n\ sobre\ la\ fecha\ de\ retiro,\ la\ fecha\ de\ devoluci\u00F3n,\r\n\ el\ libro\ prestado\ y\ el\ socio\ que\ lo\ solicit\u00F3.\ \r\n\ Permite\ registrar\ devoluciones,\ determinar\ si\ un\ pr\u00E9stamo\ est\u00E1\ vencido\ \r\n\ seg\u00FAn\ la\ fecha\ actual\ y\ mostrar\ los\ datos\ del\ pr\u00E9stamo\ formateados.\r\n\ \r\n\ @author\ Aguirre\ Mauricio\ Alejandro\r\n\ @version\ 25/10/25\r\n
 comment1.params=p_fechaRetiro\ p_libro\ p_socio
 comment1.target=Prestamo(java.util.Calendar,\ Libro,\ Socio)
+comment1.text=\r\n\ Constructor\ que\ crea\ un\ pr\u00E9stamo\ con\ fecha\ de\ retiro\ y\ asocia\r\n\ un\ libro\ y\ un\ socio.\ La\ fecha\ de\ devoluci\u00F3n\ se\ inicializa\ en\ null.\r\n\ \r\n\ @param\ p_fechaRetiro\ Fecha\ en\ la\ que\ se\ realiza\ el\ pr\u00E9stamo\r\n\ @param\ p_libro\ Libro\ prestado\r\n\ @param\ p_socio\ Socio\ que\ solicita\ el\ pr\u00E9stamo\r\n
 comment10.params=p_fecha
 comment10.target=void\ registrarFechaDevolucion(java.util.Calendar)
+comment10.text=\r\n\ Registra\ la\ fecha\ en\ la\ que\ el\ libro\ es\ devuelto\ por\ el\ socio.\r\n\ \r\n\ @param\ p_fecha\ Fecha\ de\ devoluci\u00F3n\ del\ pr\u00E9stamo\r\n
 comment11.params=p_fecha
 comment11.target=boolean\ vencido(java.util.Calendar)
+comment11.text=\r\n\ Determina\ si\ el\ pr\u00E9stamo\ est\u00E1\ vencido\ en\ funci\u00F3n\ de\ la\ fecha\ actual.\r\n\ \r\n\ Se\ calcula\ sumando\ los\ d\u00EDas\ de\ pr\u00E9stamo\ permitidos\ a\ la\ fecha\ de\ retiro\r\n\ y\ comparando\ con\ la\ fecha\ pasada\ por\ par\u00E1metro.\r\n\ \r\n\ @param\ p_fecha\ Fecha\ actual\ a\ comparar\r\n\ @return\ true\ si\ el\ pr\u00E9stamo\ est\u00E1\ vencido,\ false\ si\ a\u00FAn\ est\u00E1\ dentro\ del\ plazo\r\n
 comment12.params=
 comment12.target=java.lang.String\ toString()
+comment12.text=\r\n\ Devuelve\ una\ cadena\ con\ la\ informaci\u00F3n\ del\ pr\u00E9stamo.\r\n\ \r\n\ Muestra\ las\ fechas\ de\ retiro\ y\ devoluci\u00F3n\ (si\ existe),\ junto\ con\ los\ datos\r\n\ del\ libro\ y\ del\ socio.\ Si\ el\ libro\ a\u00FAn\ no\ fue\ devuelto,\ se\ indica\ en\ el\ mensaje.\r\n\ \r\n\ @return\ Cadena\ con\ los\ datos\ del\ pr\u00E9stamo\ formateados\r\n
 comment2.params=p_fechaRetiro
 comment2.target=void\ setFechaRetiro(java.util.Calendar)
 comment3.params=p_fechaDevolucion

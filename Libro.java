@@ -3,8 +3,8 @@ import java.util.ArrayList;
  * Representa un libro dentro del sistema bibliotecario, con su informacion basica
  * y la lista de prestamos que se le han realizado.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author (Gomez Ingrid Micaela Itati) 
+ * @version (28/10/2025)
  */
 public class Libro {
     /**
@@ -42,9 +42,7 @@ public class Libro {
         this.setPrestamos(new ArrayList<Prestamo>());
     }
     
-    /**
-     * Setters
-     */
+    // Setters
     private void setTitulo(String p_titulo) {
         this.titulo = p_titulo;
     }
@@ -61,9 +59,7 @@ public class Libro {
         this.prestamos = p_prestamos;
     }
     
-    /**
-     * Getters
-     */
+    // Getters
     public String getTitulo() {
         return this.titulo;
     }
@@ -100,6 +96,7 @@ public class Libro {
         return this.getPrestamos().remove(p_prestamo);
     }
 
+    // Métodos
     /**
      * Retorna el ultimo prestamo del libro.
      * 

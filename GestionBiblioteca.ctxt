@@ -1,5 +1,7 @@
 #BlueJ class context
 comment0.target=GestionBiblioteca
+comment0.text=\r\n\ Clase\ ejecutable\ que\ prueba\ el\ funcionamiento\ de\ la\ clase\ {@link\ Biblioteca}.\r\n\ \r\n\ Crea\ una\ biblioteca\ con\ socios\ (docentes\ y\ estudiantes)\ y\ libros,\r\n\ luego\ realiza\ pr\u00E9stamos,\ consultas\ y\ genera\ distintos\ reportes\:\r\n\ \r\n\ <ul>\r\n\ \ \ <li>Cantidad\ de\ socios\ por\ tipo</li>\r\n\ \ \ <li>Lista\ de\ docentes\ responsables</li>\r\n\ \ \ <li>Listado\ completo\ de\ libros\ y\ socios</li>\r\n\ \ \ <li>Consulta\ de\ qui\u00E9n\ tiene\ un\ libro\ prestado</li>\r\n\ </ul>\r\n\ \r\n\ @author\ Aguirre\ Mauricio\ Alejandro\r\n\ @version\ 25/10/25\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ M\u00E9todo\ principal\ del\ programa.\r\n\ Ejecuta\ una\ serie\ de\ operaciones\ de\ alta,\ pr\u00E9stamo\ y\ consulta\ \r\n\ sobre\ la\ biblioteca\ para\ verificar\ el\ correcto\ funcionamiento\r\n\ de\ las\ clases\ del\ sistema.\r\n\ \r\n\ @param\ args\ Argumentos\ de\ l\u00EDnea\ de\ comandos\ (no\ utilizados)\r\n
 numComments=2

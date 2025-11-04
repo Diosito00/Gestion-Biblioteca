@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=LibroEnBibliotecaException
+comment0.text=\r\n\ Excepci\u00F3n\ personalizada\ para\ manejar\ situaciones\ en\ las\ que\r\n\ se\ intenta\ realizar\ una\ operaci\u00F3n\ inv\u00E1lida\ sobre\ un\ libro\ que\r\n\ a\u00FAn\ se\ encuentra\ en\ la\ biblioteca.\r\n\ \r\n\ Esta\ clase\ extiende\ {@code\ Exception},\ permitiendo\ lanzar\ y\ \r\n\ capturar\ errores\ espec\u00EDficos\ relacionados\ con\ la\ gesti\u00F3n\ de\ \r\n\ libros\ en\ pr\u00E9stamo\ o\ disponibles.\r\n\ \r\n\ Ejemplo\ de\ uso\:\r\n\ <pre>\r\n\ if\ (libro.estaEnBiblioteca())\ {\r\n\ \ \ \ \ throw\ new\ LibroEnBibliotecaException("El\ libro\ a\u00FAn\ no\ ha\ sido\ prestado.");\r\n\ }\r\n\ </pre>\r\n\ \r\n\ @author\ Aguirre\ Mauricio\ Alejandro\r\n\ @version\ 25/10/25\r\n
+comment1.params=mensaje
+comment1.target=LibroEnBibliotecaException(java.lang.String)
+comment1.text=\r\n\ Crea\ una\ nueva\ excepci\u00F3n\ con\ el\ mensaje\ especificado.\r\n\ \r\n\ @param\ mensaje\ Descripci\u00F3n\ del\ error\ ocurrido\r\n
+numComments=2

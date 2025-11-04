@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Libro
-comment0.text=\r\n\ Representa\ un\ libro\ dentro\ del\ sistema\ bibliotecario,\ con\ su\ informacion\ basica\r\n\ y\ la\ lista\ de\ prestamos\ que\ se\ le\ han\ realizado.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
+comment0.text=\r\n\ Representa\ un\ libro\ dentro\ del\ sistema\ bibliotecario,\ con\ su\ informacion\ basica\r\n\ y\ la\ lista\ de\ prestamos\ que\ se\ le\ han\ realizado.\r\n\ \r\n\ @author\ (Gomez\ Ingrid\ Micaela\ Itati)\ \r\n\ @version\ (28/10/2025)\r\n
 comment1.params=p_titulo\ p_edicion\ p_editorial\ p_anio\ p_prestamos
 comment1.target=Libro(java.lang.String,\ int,\ java.lang.String,\ int,\ java.util.ArrayList)
 comment1.text=\r\n\ Constructor\ de\ la\ clase\ Libro.\r\n\ Inicializa\ todos\ los\ atributos\ del\ libro.\r\n\ \r\n\ @param\ p_titulo\ Titulo\ del\ libro\r\n\ @param\ p_edicion\ Numero\ de\ edicion\r\n\ @param\ p_editorial\ Editorial\ del\ libro\r\n\ @param\ p_anio\ A\u00F1o\ de\ publicacion\r\n\ @param\ p_prestamos\ Lista\ de\ prestamos\r\n
@@ -29,7 +29,6 @@ comment2.params=p_titulo\ p_edicion\ p_editorial\ p_anio
 comment2.target=Libro(java.lang.String,\ int,\ java.lang.String,\ int)
 comment3.params=p_titulo
 comment3.target=void\ setTitulo(java.lang.String)
-comment3.text=\r\n\ Setters\r\n
 comment4.params=p_edicion
 comment4.target=void\ setEdicion(int)
 comment5.params=p_editorial
@@ -40,7 +39,6 @@ comment7.params=p_prestamos
 comment7.target=void\ setPrestamos(java.util.ArrayList)
 comment8.params=
 comment8.target=java.lang.String\ getTitulo()
-comment8.text=\r\n\ Getters\r\n
 comment9.params=
 comment9.target=int\ getEdicion()
 numComments=18

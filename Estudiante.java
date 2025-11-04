@@ -5,9 +5,6 @@
  * @version (28/10/2025)
  */
 public class Estudiante extends Socio{
-    /**
-     * Atributos de la clase
-     */
     private String carrera;
     /**
      * Constructor de la clase Docente
@@ -20,6 +17,9 @@ public class Estudiante extends Socio{
         super(p_dni, p_nombre, p_diasPrestamo);
         this.setCarrera(p_carrera);
     }
+    
+
+    // Setters
     /**
      * Establece la carrera del estudiante
      * @param p_carrera el nuevo valor para la carrera
@@ -27,6 +27,8 @@ public class Estudiante extends Socio{
     private void setCarrera(String p_carrera){
         this.carrera = p_carrera;
     }
+    
+    // Getters
     /**
      * Obtiene la carrera que esta cursando el estudiante
      * @return String con la carrera del estudiante
@@ -34,6 +36,8 @@ public class Estudiante extends Socio{
     public String getCarrera(){
         return this.carrera;
     }
+    
+    // Métodos
     /**
      * Determina si el Estudiante puede pedir un nuevo libro
      * @return true si el estudiante cumple con las condiciones

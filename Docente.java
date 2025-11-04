@@ -8,9 +8,6 @@
 import java.util.Calendar;
 import java.util.ArrayList;
 public class Docente extends Socio{
-    /**
-     * Atributos de la clase
-     */
     private String area;
     /**
      * Constructor de la clase Docente
@@ -24,6 +21,7 @@ public class Docente extends Socio{
         this.setArea(p_area);
     }
 
+    // Setters
     /**
      * Establece el area del docente.
      * @param p_area el nuevo valor para el area
@@ -32,6 +30,7 @@ public class Docente extends Socio{
         this.area = p_area;
     }
 
+    // Getters
     /**
      * Obtiene el area al que pertenece el docente
      * @return String con el area del docente
@@ -40,6 +39,7 @@ public class Docente extends Socio{
         return this.area;
     }
 
+    // Métodos
     /**
      * Verifica el historial del Docente para ver si es responsable
      * @return true si el docente es responsable, nunca tuvo ni tiene un prestamo vencido
