@@ -51,7 +51,6 @@ public abstract class Socio
     }
 
     // Setters
-    
     private void setDniSocio(int p_dniSocio){
         this.dniSocio = p_dniSocio;
     }
@@ -69,7 +68,6 @@ public abstract class Socio
     }
 
     // Getters
-
     public int getDni(){
         return this.dniSocio;
     }

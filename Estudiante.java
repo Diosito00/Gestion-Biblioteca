@@ -20,19 +20,11 @@ public class Estudiante extends Socio{
     
 
     // Setters
-    /**
-     * Establece la carrera del estudiante
-     * @param p_carrera el nuevo valor para la carrera
-     */
     private void setCarrera(String p_carrera){
         this.carrera = p_carrera;
     }
     
     // Getters
-    /**
-     * Obtiene la carrera que esta cursando el estudiante
-     * @return String con la carrera del estudiante
-     */
     public String getCarrera(){
         return this.carrera;
     }

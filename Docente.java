@@ -22,19 +22,11 @@ public class Docente extends Socio{
     }
 
     // Setters
-    /**
-     * Establece el area del docente.
-     * @param p_area el nuevo valor para el area
-     */
     private void setArea(String p_area){
         this.area = p_area;
     }
 
     // Getters
-    /**
-     * Obtiene el area al que pertenece el docente
-     * @return String con el area del docente
-     */
     public String getArea(){
         return this.area;
     }
