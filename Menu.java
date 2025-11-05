@@ -18,15 +18,23 @@ public class Menu extends JFrame {
     private MiIcono jlAgregarSocio;
     private MiIcono jlBorrarSocio;
     private MiIcono jlListarSocios;
+    private MiIcono jlAgregarPrestamo;
+    private MiIcono jlRegistraDevolucion;
+    private MiIcono jlListarPrestamos;
     private MiBoton jbAgregarSocio;
+    private MiBoton jbAgregarPrestamo;
+    private MiBoton jbRegistraDevolucion;
+    private MiBoton jbListarPrestamos;
     private JLabel jlTitulo;
     private JTabbedPane jtpEscritorio;
     private MiPanelEscritorio jpCabecera;
     private MiPanelEscritorio jifInicio;
     private MiPanelEscritorio jifSocio;
+    private MiPanelEscritorio jifPrestamo;
     private JPanel jpOpciones;
     private JTextArea jtaTextoInicio;
-    private JTextArea jtaTextoSocio;
+    private Titulos jlTituloSocio;
+    private Titulos jlTituloPrestamo;
     //  
 
     public Menu() {
@@ -36,20 +44,28 @@ public class Menu extends JFrame {
     private void iniciarComponentes() {
         //Inicializar los atributos
         this.jlTitulo = new JLabel();
-        this.jifInicio = new MiPanelEscritorio("/imagenes/Fondo_Biblioteca_Escritorio_Oscuro.jpeg");
+        this.jifInicio = new MiPanelEscritorio("/imagenes/Fondo_Biblioteca_Escritorio_Blur.jpeg");
         this.jifSocio = new MiPanelEscritorio("/imagenes/Fondo_Biblioteca_Escritorio_Blur.jpeg");
+        this.jifPrestamo = new MiPanelEscritorio("/imagenes/Fondo_Biblioteca_Escritorio_Blur.jpeg");
         this.jpOpciones = new JPanel();
         this.jbOpcionSocios = new MisOpciones();
         this.jbAgregarSocio = new MiBoton("Agregar Socio");
         this.jbOpcionLibros = new MisOpciones();
         this.jbOpcionPrestamos = new MisOpciones();
+        this.jbAgregarPrestamo = new MiBoton("Registrar Prestamo");
+        this.jbRegistraDevolucion = new MiBoton("Registrar Devolucion");
+        this.jbListarPrestamos = new MiBoton("Listar Prestamos");
         this.jbOpcionInicio = new MisOpciones();
         this.jtaTextoInicio = new JTextArea();
-        this.jtaTextoSocio = new JTextArea();
+        this.jlTituloSocio = new Titulos("Socios");
+        this.jlTituloPrestamo = new Titulos("Prestamos");
         this.jtpEscritorio = new JTabbedPane();
         this.jlAgregarSocio = new MiIcono("/imagenes/Agregar_Socio.png");
         this.jlBorrarSocio = new MiIcono("/imagenes/Borrar_Socio.png");
         this.jlListarSocios = new MiIcono("/imagenes/Lista_Socios.png");
+        this.jlAgregarPrestamo = new MiIcono("/imagenes/Prestamo_Libro.png");
+        this.jlRegistraDevolucion = new MiIcono("/imagenes/Devolver_Libro.png");
+        this.jlListarPrestamos = new MiIcono("/imagenes/Lista_Prestamos.png");
         this.jpCabecera = new MiPanelEscritorio("/imagenes/Header.jpeg");
 
         //Settea los atributos de la ventana principal
@@ -74,6 +90,7 @@ public class Menu extends JFrame {
         this.jtpEscritorio.setLayout(null);
         this.jifInicio.setLayout(null);
         this.jifSocio.setLayout(null);
+        this.jifPrestamo.setLayout(null);
 
         //Añade el titulo a la cabecera y settea su ubicacion y tamaño
         this.jpCabecera.add(jlTitulo);
@@ -90,6 +107,18 @@ public class Menu extends JFrame {
         //Añade icono de listar socios
         this.jifSocio.add(jlListarSocios);
         this.jlListarSocios.setBounds(460, 100, 64, 64);
+        
+        //Añade icono de agregar prestamo
+        this.jifPrestamo.add(jlAgregarPrestamo);
+        this.jlAgregarPrestamo.setBounds(60, 100, 64, 64);
+
+        //Añade icono de borrar socio
+        this.jifPrestamo.add(jlRegistraDevolucion);
+        this.jlRegistraDevolucion.setBounds(260, 100, 64, 64);
+
+        //Añade icono de listar socios
+        this.jifPrestamo.add(jlListarPrestamos);
+        this.jlListarPrestamos.setBounds(460, 100, 64, 64);
 
         //Añade boton de agregar socio
         this.jifSocio.add(jbAgregarSocio);
@@ -112,15 +141,47 @@ public class Menu extends JFrame {
         this.jifInicio.add(jtaTextoInicio);
         this.jtaTextoInicio.setBounds(50, 100, 1000, 100);
 
-        //Settea los atributos del texto en el panel interno Socio
-        this.jtaTextoSocio.setEnabled(false);
-        this.jtaTextoSocio.setFont(new Font("Corbel", 1, 40));
-        this.jtaTextoSocio.setForeground(new Color(19, 94, 255));
-        this.jtaTextoSocio.setText("Socios");
-        this.jtaTextoSocio.setOpaque(false);
-        this.jifSocio.add(jtaTextoSocio);
-        this.jtaTextoSocio.setBounds(10, 10, 150, 100);
+        //Añade el titulo a la pestaña de socios
+        this.jifSocio.add(jlTituloSocio);
+        
+        //Añade el titulo a la pestaña de prestamos
+        this.jifPrestamo.add(jlTituloPrestamo);
+        
+        //Añade botones a la pestaña de prestamos
+        this.jifPrestamo.add(jbAgregarPrestamo);
+        this.jbAgregarPrestamo.setBounds(25, 200, 130, 40);
+        this.jbAgregarPrestamo.addMouseListener(new MouseAdapter() {
+                public void mouseEntered(MouseEvent evt) {
+                    jbAgregarPrestamo.jBotonMouseEntered(evt);
+                }
 
+                public void mouseExited(MouseEvent evt) {
+                    jbAgregarPrestamo.jBotonMouseExited(evt);
+                }
+            });
+        this.jifPrestamo.add(jbRegistraDevolucion);
+        this.jbRegistraDevolucion.setBounds(225, 200, 130, 40);
+        this.jbRegistraDevolucion.addMouseListener(new MouseAdapter() {
+                public void mouseEntered(MouseEvent evt) {
+                    jbRegistraDevolucion.jBotonMouseEntered(evt);
+                }
+
+                public void mouseExited(MouseEvent evt) {
+                    jbRegistraDevolucion.jBotonMouseExited(evt);
+                }
+            });
+        this.jifPrestamo.add(jbListarPrestamos);
+        this.jbListarPrestamos.setBounds(425, 200, 130, 40);
+        this.jbListarPrestamos.addMouseListener(new MouseAdapter() {
+                public void mouseEntered(MouseEvent evt) {
+                    jbListarPrestamos.jBotonMouseEntered(evt);
+                }
+
+                public void mouseExited(MouseEvent evt) {
+                    jbListarPrestamos.jBotonMouseExited(evt);
+                }
+            });    
+        
         //Color de fondo para el panel de opciones
         this.jpOpciones.setBackground(new Color(102, 102, 102));
 
@@ -173,6 +234,7 @@ public class Menu extends JFrame {
                     jbOpcionLibros.jbOpcionMouseExited(evt);
                 }
             });
+            
         //Inicializa el texto de la opcion prestamos y añade el boton al panel de opciones
         this.jbOpcionPrestamos.setText("Prestamos");
         this.jpOpciones.add(jbOpcionPrestamos);
@@ -185,15 +247,18 @@ public class Menu extends JFrame {
                 public void mouseExited(MouseEvent evt) {
                     jbOpcionPrestamos.jbOpcionMouseExited(evt);
                 }
+                
+                public void mouseClicked(MouseEvent evt){
+                    jifPrestamoMouseClicked(evt);
+                }
             });
 
         //Añade el panel de contenido a la ventana principal
         this.getContentPane().add(jtpEscritorio);
         this.jtpEscritorio.setBounds(170, 90, 730, 420);// Settea su ubicacion
         this.jtpEscritorio.addTab("tab1", jifInicio);// Agrega una ventana interna al panel de contenido
-        this.jifInicio.setBounds(0, 0, 730, 420);
         this.jtpEscritorio.addTab("tab2", jifSocio);
-        this.jifSocio.setBounds(0, 0, 730, 420);
+        this.jtpEscritorio.addTab("tab3", jifPrestamo);
         //Añade el panel de opciones a la ventana principal
         this.getContentPane().add(jpOpciones);
         this.jpOpciones.setBounds(0, 90, 170, 420);
@@ -211,5 +276,9 @@ public class Menu extends JFrame {
 
     private void jifSocioMouseClicked(MouseEvent evt) {                                           
         this.jtpEscritorio.setSelectedIndex(1);
+    }
+    
+    private void jifPrestamoMouseClicked(MouseEvent evt) {                                           
+        this.jtpEscritorio.setSelectedIndex(2);
     }
 }

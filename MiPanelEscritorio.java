@@ -7,6 +7,7 @@ public class MiPanelEscritorio extends JPanel {
     public MiPanelEscritorio(String image) {
         // Carga la imagen desde el archivo (puede ser una ruta absoluta o del proyecto)
         imagen = new ImageIcon(getClass().getResource(image)).getImage();
+        this.setBounds(0, 0, 730, 420);
     }
 
     @Override
